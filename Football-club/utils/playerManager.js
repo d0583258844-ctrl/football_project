@@ -54,3 +54,13 @@ export function updatePlayer(id, newData) {
     }
   }
 }
+
+export const findPlayerByName = (playerName) => {
+  const newPlayer = players.map((i) => {
+    if (i.name.includes(playerName)) {
+      return i;
+    }
+  });
+  return newPlayer
+};
+
