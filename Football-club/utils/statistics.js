@@ -24,3 +24,9 @@ export function getAverageAge() {
   ;
   return total
 }
+
+export function getPlayersByNatioality(nationality) {
+    const newArr = players.filter((player) => player.nationality === nationality)    
+    return newArr
+}
+
