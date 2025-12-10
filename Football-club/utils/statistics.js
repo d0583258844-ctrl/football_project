@@ -19,14 +19,17 @@ export function getTopScorer() {
 }
 
 export function getAverageAge() {
- const sum =  players.reduce((sum, player) => sum + player.age, 0);
-  const total = (sum / players.length).toFixed(1)
-  ;
-  return total
+  const sum = players.reduce((sum, player) => sum + player.age, 0);
+  const total = (sum / players.length).toFixed(1);
+  return total;
 }
 
 export function getPlayersByNatioality(nationality) {
-    const newArr = players.filter((player) => player.nationality === nationality)    
-    return newArr
+  const newArr = players.filter((player) => player.nationality === nationality);
+  return newArr;
 }
 
+export function getPLayersByGoals() {
+  const sortedPlayers = players.sort((a, b) => b.goals - a.goals);
+  return sortedPlayers;
+}
