@@ -17,3 +17,10 @@ export function getTopScorer() {
   const max = players.sort((a, b) => b.goals - a.goals);
   return max[0].goals;
 }
+
+export function getAverageAge() {
+ const sum =  players.reduce((sum, player) => sum + player.age, 0);
+  const total = (sum / players.length).toFixed(1)
+  ;
+  return total
+}
