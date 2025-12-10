@@ -33,3 +33,8 @@ export function getPLayersByGoals() {
   const sortedPlayers = players.sort((a, b) => b.goals - a.goals);
   return sortedPlayers;
 }
+
+export function getYoungPlayers(maxAge) {
+  const new_arr = players.filter((player) => player.age < maxAge);
+  return new_arr;
+}
