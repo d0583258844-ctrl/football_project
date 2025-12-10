@@ -55,3 +55,8 @@ export function getTop3Scorers() {
   const top3 = players.sort((a, b) => b.goals - a.goals);
   return top3.slice(0, 3);
 }
+
+export function getAllPlayerNames() {
+  const names = players.map((player) => player.name);
+  return names;
+}
