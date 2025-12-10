@@ -8,3 +8,6 @@ export function getPlayersByPosition(position) {
   return players.filter((player) => player.position === position);
 }
 
+export function getTotalAssists() {
+    return players.reduce((total, player) => total + player.assists, 0)
+}
