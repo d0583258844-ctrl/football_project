@@ -45,3 +45,8 @@ export function getPlayersWithMinGoals(minGoals) {
   );
   return players_with_min_goals;
 }
+
+export function calculatePlayerScore(player) {
+  const Score = player.goals * 3 + player.assists * 3;
+  return Score;
+}
