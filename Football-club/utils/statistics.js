@@ -60,3 +60,11 @@ export function getAllPlayerNames() {
   const names = players.map((player) => player.name);
   return names;
 }
+
+export function getGoalsPerMatch(player) {
+  if (player.matches === 0 || player.goals === 0) {
+    return " cen oot div by 0";
+  }
+  const result = player.goals / player.matches;
+  return result.toFixed(2);
+}
