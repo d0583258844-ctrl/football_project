@@ -1,5 +1,10 @@
 import { players } from "../data/players.js";
 
 export function getTotalGoals() {
-  console.log(players.reduce((total, player) => total + player.goals, 0));
+  return players.reduce((total, player) => total + player.goals, 0);
 }
+
+export function getPlayersByPosition(position) {
+  return players.filter((player) => player.position === position);
+}
+
