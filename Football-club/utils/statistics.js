@@ -9,5 +9,11 @@ export function getPlayersByPosition(position) {
 }
 
 export function getTotalAssists() {
-    return players.reduce((total, player) => total + player.assists, 0)
+  return players.reduce((total, player) => total + player.assists, 0);
+}
+
+export function getTopScorer() {
+  // return players.reduce((max, player) => Math.max(max, player.goals),0)
+  const max = players.sort((a, b) => b.goals - a.goals);
+  return max[0].goals;
 }
