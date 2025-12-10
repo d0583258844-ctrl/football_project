@@ -50,3 +50,8 @@ export function calculatePlayerScore(player) {
   const Score = player.goals * 3 + player.assists * 3;
   return Score;
 }
+
+export function getTop3Scorers() {
+  const top3 = players.sort((a, b) => b.goals - a.goals);
+  return top3.slice(0, 3);
+}
